@@ -38,12 +38,13 @@
                                                 id: idTopic.value,
                                                 status: status.checked ? 2 : 1
                                           },
-                                          success: function () {
+                                          success: function ($model) {
                                                 if (qSelectAll('.statusChecked')[index].checked) {
                                                       toast('toast__success','fas fa-check-circle','Bạn đã khôi phục trạng thái','Chủ đề <b>'+topicName.innerText +'</b> đã được bật');
                                                 } else {
                                                       toast('toast__error','fas fa-exclamation-circle','Bạn đã tắt trạng thái','Chủ đề <b>'+topicName.innerText +'</b> đã bị tắt');
                                                 }
+                                                console.log($model);
                                           }
                                     });
                               })

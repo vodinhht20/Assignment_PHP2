@@ -10,7 +10,6 @@ class NewController extends BaseController {
                         ->orderBy('created_at','desc')
                         ->limit(3)
                         ->get();
-        
         $postTopicVegetable = Post::where('topic_id','=',8)
                                     ->orderBy('created_at','desc')
                                     ->limit(4)

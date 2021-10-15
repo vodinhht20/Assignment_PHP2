@@ -12,10 +12,11 @@ use App\Controllers\Admin\TrashController;
 use App\Controllers\LoginController;
 use App\Controllers\SiginController;
 use App\Controllers\NewController;
+
 class Routing {
     public static function start ($url){
+       
         $router = new RouteCollector();
-        // fillter đăng nhập
         $router->filter('auth', function() {
             if (!isset($_SESSION['auth']) || empty($_SESSION['auth'])) {
                 header('location: '.BASE_URL.'login');

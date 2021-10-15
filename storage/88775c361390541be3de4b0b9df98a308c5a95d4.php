@@ -45,7 +45,7 @@
             </button>
             </div>
             <div class="modal-body">
-                Bạn có chắc chắn muốn xóa vĩnh viễn không ! Hành động này không thể khôi phục
+                Bạn có chắc chắn muốn xóa sản phẩm này không ?
             </div>
             <div class="modal-footer">
                 <a href='' id="agree_confirm" type="button" class="btn btn-danger">Đồng ý</a>

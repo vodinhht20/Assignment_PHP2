@@ -38,11 +38,11 @@ class ProductController extends BaseController {
         $flight  = Product::find($id);
         $flight -> fill($_POST);
         if ($_FILES['image']['size'] > 1) {
-            $flight->image     = ProductController::upFile("image", "./public/image/");
+            $flight->image = ProductController::upFile("image", "./public/image/");
         } else {
-            $flight->image     = $flight ->image;
+            $flight->image = $flight ->image;
         }
-        $flight->slug    = create_slug($_POST['name']);
+        $flight->slug = create_slug($_POST['name']);
         $flight->save();
         header("location: ".BASE_URL."admin/san-pham");
     }

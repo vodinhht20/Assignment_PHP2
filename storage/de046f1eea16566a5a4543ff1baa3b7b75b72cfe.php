@@ -57,112 +57,29 @@
             </div>
             <div class="silde-product">
                 <div class="owl-carousel">
-                    <div class="product-item" style="border: none">
-                        <div class="product-image">
-                            <a href="">
-                                <img src="<?php echo e(PUBLIC_PATH); ?>image/sp22.jpg" alt="Ổi lê ruột đỏ">
-                            </a>
-                            <div class="icon-on-image-product">
-                                <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-information">
-                            <a href="">
-                                <p>Ổi lê ruột đỏ</p>
-                                <div class="box-price">
-                                    <span class="price-primary">20.000đ</span>
-                                    <span class="price-sub">50.000đ</span>
+                    <?php $__currentLoopData = $product_hosts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="product-item">
+                            <div class="product-image">
+                                <a href="<?php echo e(BASE_URL); ?>san-pham/<?php echo e($item->slug); ?>">
+                                    <img src="<?php echo e(PUBLIC_PATH); ?>image/<?php echo e($item->image); ?>" alt="<?php echo e($item->slug); ?>">
+                                </a>
+                                <div class="icon-on-image-product">
+                                    <i class="ti-heart" title="Thêm vào yêu thích"></i>
+                                    <a href="" class="link-cart-full"><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
                                 </div>
-                            </a>
-                        </div>
-                        <span class="product-sale">- 60%</span>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image">
-                            <a href="">
-                                <img src="<?php echo e(PUBLIC_PATH); ?>image/sp2.jpg" alt="Đào đỏ mỹ">
-                            </a>
-                            <div class="icon-on-image-product">
-                                <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
                             </div>
-                        </div>
-                        <div class="product-information">
-                            <a href="">
-                                <p>Đào đỏ mỹ</p>
-                                <div class="box-price">
-                                    <span class="price-primary">40.000đ</span>
-                                    <span class="price-sub">60.000đ</span>
-                                </div>
-                            </a>
-                        </div>
-                        <span class="product-sale">- 60%</span>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image">
-                            <a href="">
-                                <img src="<?php echo e(PUBLIC_PATH); ?>image/sp3.jpg" alt="Dâu tây">
-                            </a>
-                            <div class="icon-on-image-product">
-                                <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
+                            <div class="product-information">
+                                <a href="<?php echo e(BASE_URL); ?>san-pham/<?php echo e($item->slug); ?>">
+                                    <p><?php echo e($item->name); ?></p>
+                                    <div class="box-price">
+                                        <span class="price-primary"><?php echo e(number_format($item->priceDiscount())); ?> đ</span>
+                                        <span class="price-sub"><?php echo e(number_format($item->price)); ?> đ</span>
+                                    </div>
+                                </a>
                             </div>
+                            <span class="product-sale">- <?php echo e($item->discount); ?>%</span>
                         </div>
-                        <div class="product-information">
-                            <a href="">
-                                <p>Dâu tây</p>
-                                <div class="box-price">
-                                    <span class="price-primary">138.000đ</span>
-                                    <span class="price-sub">238.000đ</span>
-                                </div>
-                            </a>
-                        </div>
-                        <span class="product-sale">- 42%</span>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image">
-                            <a href="">
-                                <img src="<?php echo e(PUBLIC_PATH); ?>image/sp6.jpg" alt="Chanh tươi vỏ xanh">
-                            </a>
-                            <div class="icon-on-image-product">
-                                <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-information">
-                            <a href="">
-                                <p>Chanh tươi vỏ xanh</p>
-                                <div class="box-price">
-                                    <span class="price-primary">30.000đ</span>
-                                    <span class="price-sub">38.000đ</span>
-                                </div>
-                            </a>
-                        </div>
-                        <span class="product-sale">- 60%</span>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image">
-                            <a href="">
-                                <img src="<?php echo e(PUBLIC_PATH); ?>image/sp5.jpg" alt="Trái cam mật">
-                            </a>
-                            <div class="icon-on-image-product">
-                                <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                <a href="" class="link-cart-full"><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-information">
-                            <a href="">
-                                <p>Trái cam mật</p>
-                                <div class="box-price">
-                                    <span class="price-primary">138.000đ</span>
-                                    <span class="price-sub">128.000đ</span>
-                                </div>
-                            </a>
-                        </div>
-                        <span class="product-sale">- 50%</span>
-                    </div>
-                    
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
         </div>
@@ -206,112 +123,29 @@
                     <div class="product-show-main">
                         <div class="silde-product">
                             <div class="owl-carousel">
-                                <div class="product-item" style="border: none">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp22.jpg" alt="Ổi lê ruột đỏ">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Ổi lê ruột đỏ</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">20.000đ</span>
-                                                <span class="price-sub">50.000đ</span>
+                                <?php $__currentLoopData = $product_eggs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <a href="<?php echo e(BASE_URL); ?>san-pham/<?php echo e($item->slug); ?>">
+                                                <img src="<?php echo e(PUBLIC_PATH); ?>image/<?php echo e($item->image); ?>" alt="<?php echo e($item->slug); ?>">
+                                            </a>
+                                            <div class="icon-on-image-product">
+                                                <i class="ti-heart" title="Thêm vào yêu thích"></i>
+                                                <a href="" class="link-cart-full"><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 60%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp2.jpg" alt="Đào đỏ mỹ">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
                                         </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Đào đỏ mỹ</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">40.000đ</span>
-                                                <span class="price-sub">60.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 60%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp3.jpg" alt="Dâu tây">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
+                                        <div class="product-information">
+                                            <a href="<?php echo e(BASE_URL); ?>san-pham/<?php echo e($item->slug); ?>">
+                                                <p><?php echo e($item->name); ?></p>
+                                                <div class="box-price">
+                                                    <span class="price-primary"><?php echo e(number_format($item->priceDiscount())); ?> đ</span>
+                                                    <span class="price-sub"><?php echo e(number_format($item->price)); ?> đ</span>
+                                                </div>
+                                            </a>
                                         </div>
+                                        <span class="product-sale">- <?php echo e($item->discount); ?>%</span>
                                     </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Dâu tây</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">138.000đ</span>
-                                                <span class="price-sub">238.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 42%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp6.jpg" alt="Chanh tươi vỏ xanh">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Chanh tươi vỏ xanh</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">30.000đ</span>
-                                                <span class="price-sub">38.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 60%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp5.jpg" alt="Trái cam mật">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href="" class="link-cart-full"><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Trái cam mật</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">138.000đ</span>
-                                                <span class="price-sub">128.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 50%</span>
-                                </div>
-                                
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                         </div>
                     </div>
@@ -326,111 +160,29 @@
                     <div class="product-show-main">
                         <div class="silde-product">
                             <div class="owl-carousel">
-                                <div class="product-item" style="border: none">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp7.jpg" alt="Hành tây">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Hành tây</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">18.000đ</span>
+                                <?php $__currentLoopData = $product_vegetables; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <a href="<?php echo e(BASE_URL); ?>san-pham/<?php echo e($item->slug); ?>">
+                                                <img src="<?php echo e(PUBLIC_PATH); ?>image/<?php echo e($item->image); ?>" alt="<?php echo e($item->slug); ?>">
+                                            </a>
+                                            <div class="icon-on-image-product">
+                                                <i class="ti-heart" title="Thêm vào yêu thích"></i>
+                                                <a href="" class="link-cart-full"><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 60%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp20.jpg" alt="Cà chua">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
                                         </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Cà chua</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">15.000đ</span>
-                                                <span class="price-sub">20.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 60%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp19.jpg" alt="Ớt chuông vàng">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
+                                        <div class="product-information">
+                                            <a href="<?php echo e(BASE_URL); ?>san-pham/<?php echo e($item->slug); ?>">
+                                                <p><?php echo e($item->name); ?></p>
+                                                <div class="box-price">
+                                                    <span class="price-primary"><?php echo e(number_format($item->priceDiscount())); ?> đ</span>
+                                                    <span class="price-sub"><?php echo e(number_format($item->price)); ?> đ</span>
+                                                </div>
+                                            </a>
                                         </div>
+                                        <span class="product-sale">- <?php echo e($item->discount); ?>%</span>
                                     </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Ớt chuông vàng</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">13.000đ</span>
-                                                <span class="price-sub">17.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 42%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp17-2.jpg" alt="Ớt chuông xanh">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Ớt chuông xanh</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">12.000đ</span>
-                                                <span class="price-sub">15.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 60%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp5.jpg" alt="Trái cam mật">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href="" class="link-cart-full"><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Trái cam mật</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">138.000đ</span>
-                                                <span class="price-sub">128.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 50%</span>
-                                </div>
-                                
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                         </div>
                     </div>
@@ -477,109 +229,29 @@
                     <div class="product-show-main">
                         <div class="silde-product">
                             <div class="owl-carousel">
-                                <div class="product-item" style="border: none">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp12.jpg" alt="Thịt bò">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Thịt bò</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">160.000đ</span>
+                                <?php $__currentLoopData = $product_meats; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <a href="<?php echo e(BASE_URL); ?>san-pham/<?php echo e($item->slug); ?>">
+                                                <img src="<?php echo e(PUBLIC_PATH); ?>image/<?php echo e($item->image); ?>" alt="<?php echo e($item->slug); ?>">
+                                            </a>
+                                            <div class="icon-on-image-product">
+                                                <i class="ti-heart" title="Thêm vào yêu thích"></i>
+                                                <a href="" class="link-cart-full"><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
                                             </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp10.jpg" alt="Cá hồi">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
                                         </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Cá hồi</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">200.000đ</span>
-                                                <span class="price-sub">230.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 60%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp26.jpg" alt="Thịt gà">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
+                                        <div class="product-information">
+                                            <a href="<?php echo e(BASE_URL); ?>san-pham/<?php echo e($item->slug); ?>">
+                                                <p><?php echo e($item->name); ?></p>
+                                                <div class="box-price">
+                                                    <span class="price-primary"><?php echo e(number_format($item->priceDiscount())); ?> đ</span>
+                                                    <span class="price-sub"><?php echo e(number_format($item->price)); ?> đ</span>
+                                                </div>
+                                            </a>
                                         </div>
+                                        <span class="product-sale">- <?php echo e($item->discount); ?>%</span>
                                     </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Thịt gà</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">118.000đ</span>
-                                                <span class="price-sub">238.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 42%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp28.jpg" alt="Thịt lợn">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href=""><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Thịt lợn</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">170.000đ</span>
-                                                <span class="price-sub">199.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 60%</span>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="">
-                                            <img src="<?php echo e(PUBLIC_PATH); ?>image/sp12.jpg" alt="Thịt bò úc">
-                                        </a>
-                                        <div class="icon-on-image-product">
-                                            <i class="ti-heart" title="Thêm vào yêu thích"></i>
-                                            <a href="" class="link-cart-full"><i class="ti-shopping-cart-full" title="Thêm vào giỏ hàng"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-information">
-                                        <a href="">
-                                            <p>Thịt bò úc</p>
-                                            <div class="box-price">
-                                                <span class="price-primary">218.000đ</span>
-                                                <span class="price-sub">238.000đ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <span class="product-sale">- 30%</span>
-                                </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 
                             </div>
                         </div>

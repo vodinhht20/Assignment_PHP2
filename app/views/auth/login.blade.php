@@ -15,7 +15,6 @@
                     <div class="form-group">
                         <label for="accEmail">Email</label>
                         <input type="text" class="form-control" name="email" id="accEmail" placeholder="Nhập địa chỉ email" required>
-
                     </div>
                     <div class="form-group">
                         <label for="accPassword">Mật Khẩu</label>

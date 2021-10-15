@@ -12,6 +12,7 @@ class TopicController extends BaseController {
         $model = Topic::find($_POST['id']);
         $model -> status = $_POST['status'];
         $model -> save();
+        return response()->json($model);
     }
     public function create() {
         $author = $_SESSION['auth']['name'];

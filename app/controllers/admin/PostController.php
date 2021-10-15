@@ -49,21 +49,7 @@ class PostController extends BaseController {
             header("location: ".BASE_URL."admin/bai-viet");
     }
     public function search(Request $request) {
-        // $output = '';
-        // $topics = Topic::where('title','like', '%'.$request->key.'%');
-        // foreach ($topics as $topic) {
-        //     $output += `
-        //     <tr>
-        //         <td>${$topic['title']}</td>
-        //         <td class="post-content">${$topic['content']}</td>
-        //         <td>${$topic['author_id']}</td>
-        //         <td>${$topic['topic_id']}</td>
-        //         <td><img width="150" src="${$topic['thumbnail_img']}" alt=""></td>
-        //         <td class="bnt-remote"><a  class="btn btn-success" href="{{BASE_URL}}admin/bai-viet/edit/{$topic['id']}">Sửa</a>
-        //             <a class="btn btn-danger" href="{{BASE_URL}}admin/san-pham/delete?id=${$topic['id']}">Xóa</a>
-        //         </td>
-        //     </tr>`;
-        // }
+      
         $output = 'hello';
         echo $output;
     }
